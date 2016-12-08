@@ -11,3 +11,9 @@ WORKDIR /nexus-3.1.0-04/bin
 EXPOSE 808
 
 ENTRYPOINT ./nexus  start && bash
+
+
+#----------------RUN COMMAND---------------#
+#docker run -p 8085:8081 -dti nexustest bash 
+
+
