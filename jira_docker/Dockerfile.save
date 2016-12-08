@@ -1,0 +1,13 @@
+FROM ubuntu
+
+RUN apt-get update
+
+ADD https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-7.2.3-x64.bin /atlassian-jira-software-7.2.3-x64.bin
+RUN chmod a+x atlassian-jira-software-7.2.3-x64.bin
+EXPOSE 8081
+EXPOSE 8006
+
+RUN  ./atlassian-jira-software-7.2.3-x64.bin 
+
+ENTRYPOINT ./atlassian/jira/bin/start-jira.sh -fg
+
